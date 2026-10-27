@@ -1,6 +1,6 @@
 # Diaphora for Ghidra
 
-Port of [joxeankoret/diaphora](https://github.com/joxeankoret/diaphora) (IDAPython) to Ghidra 12.1.4+, as a native Java extension. The SQLite database schema (version 3.4) and the SQL heuristics are those of the Python version. The port is based on Diaphora 3.4.1, commit [`de0eb92`](https://github.com/joxeankoret/diaphora/tree/de0eb920c1e54649bb3e7c4df5fa058b5c2cdc91) of the original repository.
+Port of [joxeankoret/diaphora](https://github.com/joxeankoret/diaphora) (IDAPython) to Ghidra 12.2+, as a native Java extension. The SQLite database schema (version 3.4) and the SQL heuristics are those of the Python version. The port is based on Diaphora 3.4.1, commit [`de0eb92`](https://github.com/joxeankoret/diaphora/tree/de0eb920c1e54649bb3e7c4df5fa058b5c2cdc91) of the original repository.
 
 ![The Partial matches tab of the results window after diffing two builds of urlmon.dll, the rows colored by ratio](screenshots/show-result.png)
 
@@ -31,14 +31,14 @@ So what swapping databases gains is a second set of results: in our test, diapho
 
 ## Build & install
 
-Requirements: JDK 21+ and Ghidra 12.1.4+. The Gradle wrapper (`gradlew.bat`, Gradle 9.1.0) downloads Gradle, so there is nothing else to install.
+Requirements: JDK 25+ and Ghidra 12.2+. The Gradle wrapper (`gradlew.bat`, Gradle 9.1.0) downloads Gradle, so there is nothing else to install.
 
 ```bat
-set GHIDRA_INSTALL_DIR=C:\path\to\ghidra_12.1.4_PUBLIC
+set GHIDRA_INSTALL_DIR=C:\path\to\ghidra_12.2_PUBLIC
 gradlew.bat buildExtension
 ```
 
-The extension zip lands in `dist\` (`ghidra_12.1.4_PUBLIC_<date>_diaphora-ghidra.zip`). It includes [sqlite-jdbc](https://github.com/xerial/sqlite-jdbc), which Gradle downloads from Maven Central.
+The extension zip lands in `dist\` (`ghidra_12.2_PUBLIC_<date>_diaphora-ghidra.zip`). It includes [sqlite-jdbc](https://github.com/xerial/sqlite-jdbc), which Gradle downloads from Maven Central.
 
 To install it:
 
